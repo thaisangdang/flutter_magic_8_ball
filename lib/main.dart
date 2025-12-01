@@ -1,19 +1,46 @@
 import 'package:flutter/material.dart';
 
 void main() {
-  runApp(const MainApp());
+  runApp(const MaterialApp(home: BallPage()));
 }
 
-class MainApp extends StatelessWidget {
-  const MainApp({super.key});
+class BallPage extends StatelessWidget {
+  const BallPage({super.key});
 
   @override
   Widget build(BuildContext context) {
-    return const MaterialApp(
-      home: Scaffold(
-        body: Center(
-          child: Text('Hello World!'),
+    return Scaffold(
+      backgroundColor: Colors.blue.shade300,
+      appBar: AppBar(
+        backgroundColor: Colors.blue.shade900,
+        title: const Text(
+          'Ask Me Anything',
+          style: TextStyle(color: Colors.white),
         ),
+      ),
+      body: const Ball(),
+    );
+  }
+}
+
+class Ball extends StatefulWidget {
+  const Ball({super.key});
+
+  @override
+  State<Ball> createState() => _BallState();
+}
+
+class _BallState extends State<Ball> {
+  int ballNumber = 1; // Default state
+
+  @override
+  Widget build(BuildContext context) {
+    return Center(
+      child: TextButton(
+        onPressed: () {
+          print('I got clicked');
+        },
+        child: Image.asset('assets/images/magic-ball-$ballNumber.png'),
       ),
     );
   }
