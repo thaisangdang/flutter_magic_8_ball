@@ -3,7 +3,9 @@ import 'dart:math';
 import 'package:flutter/material.dart';
 
 void main() {
-  runApp(const MaterialApp(home: BallPage()));
+  runApp(
+    const MaterialApp(home: BallPage(), debugShowCheckedModeBanner: false),
+  );
 }
 
 class BallPage extends StatelessWidget {
