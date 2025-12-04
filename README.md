@@ -23,7 +23,7 @@ By building this project, you will learn:
 
 1. **Ensure you are in the project directory:**
     
-    `cd magic_8_ball`
+    `cd flutter_magic_8_ball`
     
 2. **Install Dependencies:**
     
